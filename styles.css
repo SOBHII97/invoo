@@ -1,0 +1,245 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url("pic\\bg3-Photoroom.png");
+     /* Replace with your image path */
+    background-size: cover;
+        /* Make sure the image covers the entire screen */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+        /* Keeps the background fixed during scroll */
+    background-position: center;
+}
+
+ header {
+    background-color: #01ffe696;
+    /* Green color for header */
+    color: #000000;
+    padding: 1.6em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    position: relative;
+    top: 0;
+} 
+ 
+
+/* Logo Styling */
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.logo img {
+    height: 50px;
+    /* Adjust logo height as needed */
+    width: auto;
+}
+
+.navbar {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1em;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+.nav-links li a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #000000;
+    /* Gold color on hover */
+    font-weight: bold;
+}
+
+main {
+    padding: 2em;
+    text-align: center;
+}
+
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        /* Stack links vertically on small screens */
+        position: absolute;
+        top: 60px;
+        /* Positioning below the header */
+        left: 0;
+        right: 0;
+        background-color: #01ffe696;
+        display: none;
+    }
+
+    .navbar.active .nav-links {
+        display: flex;
+        /* Show nav links when the navbar is active */
+    }
+
+    .navbar .menu-toggle {
+        display: inline-block;
+        cursor: pointer;
+        color: #000000;
+        font-size: 24px;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+}
+
+/* Show logo and make it stick to the top left corner when resizing */
+@media (max-width: 768px) {
+    .logo {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+}
+/* Contact Section */
+.contact-section {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 2em;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.contact-section p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 1.5em;
+}
+
+.contact-form-container {
+    margin-top: 2em;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1em;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #01ffe696;
+    color: rgb(0, 0, 0);
+    padding: 0.75em 2em;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.submit-btn:hover {
+    background-color: #01ffe696;
+}
+.contact-info {
+    margin-top: 2em;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+footer {
+    background-color: #01ffe696;
+    /* Green color for footer */
+    color: #000000;
+    text-align: center;
+    padding: 1em 0;
+    flex-shrink: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Centers content horizontally */
+    align-items: center;
+    /* Centers content vertically */
+
+}
+
+.product-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    /* Prevents items from wrapping to the next line */
+    overflow-x: auto;
+    /* Allows horizontal scrolling on smaller screens */
+}
+
+.pdf-item {
+    text-align: center;
+    min-width: 150px;
+    /* Set a min-width to control each item’s width */
+}
+
+.pdf-thumbnail {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+a:hover {
+    color: #388E3C;
+}
+
+.contact-info a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    color: #00c3ff;
+}
